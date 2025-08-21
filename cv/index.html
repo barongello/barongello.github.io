@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Curriculum Vitae</title>
+    <style type="text/css">
+      @media (orientation: landscape) {
+        :root {
+          --button-size: 10vh;
+        }
+      }
+
+      @media (orientation: portrait) {
+        :root {
+          --button-size: 10vw;
+        }
+      }
+
+      :root {
+        --transition-duration: 250ms;
+        --button-font-size: calc(var(--button-size) * 0.4);
+      }
+
+      body {
+        background-color: #ffffff;
+        color: #333333;
+        font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        word-wrap: break-word;
+        transition: all linear var(--transition-duration);
+        margin: 15px 15px;
+      }
+
+      body.dark {
+        background-color: #333333;
+        color: #ffffff;
+      }
+
+      a {
+        color: #0088cc;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      hr {
+        margin-top: 22px;
+        transition: all linear var(--transition-duration);
+      }
+
+      #content {
+        max-width: 640px;
+        margin: auto;
+      }
+
+      #content.dark hr {
+        filter: invert();
+      }
+
+      #theme-switch {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        width: var(--button-size);
+        height: var(--button-size);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #333333;
+        border-radius: 50%;
+        color: #ffffff;
+        transition: all linear var(--transition-duration);
+        cursor: pointer;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        font-size: var(--button-font-size);
+      }
+
+      #theme-switch.dark {
+        background-color: #ffffff;
+        color: #333333;
+      }
+
+      #theme-switch::before {
+        content: '☾';
+      }
+
+      #theme-switch.dark::before {
+        content: '☀';
+      }
+
+      #goto-top {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+        width: var(--button-size);
+        height: var(--button-size);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #0088cc;
+        border-radius: 50%;
+        color: #ffffff;
+        transition: all linear var(--transition-duration);
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        font-size: var(--button-font-size);
+      }
+
+      #goto-top:hover {
+        text-decoration: none;
+      }
+
+      #goto-top.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="content">
+      Loading...
+    </div>
+
+    <div id="theme-switch" onclick="switchTheme()"></div>
+
+    <a href="#toc" id="goto-top" class="hidden">
+      ⬆
+    </a>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@14.0.0/dist/markdown-it.min.js"></script>
+
+    <script>
+      const body = document.body;
+      const content = document.getElementById("content");
+      const themeSwitch = document.getElementById("theme-switch");
+      const gotoTop = document.getElementById("goto-top");
+
+      function updateGotoTop() {
+        const toc = document.getElementById("toc");
+        const tocRect = toc.getBoundingClientRect();
+        const isToCHidden = (tocRect.top < 0 && tocRect.bottom < 0);
+        const isGotoTopHidden = (gotoTop.classList.contains("hidden") === true);
+
+        if (isToCHidden === true && isGotoTopHidden === true) {
+          gotoTop.classList.remove("hidden");
+        }
+        else if (isToCHidden === false && isGotoTopHidden === false) {
+          gotoTop.classList.add("hidden");
+        }
+      }
+
+      function switchTheme() {
+        body.classList.toggle("dark");
+        content.classList.toggle("dark");
+        themeSwitch.classList.toggle("dark");
+      }
+
+      window.addEventListener("scroll", updateGotoTop);
+      window.addEventListener("resize", updateGotoTop);
+
+      const hour = (new Date()).getHours();
+
+      if (hour < 6 || hour >= 18) {
+        switchTheme();
+      }
+
+      const md = markdownit({
+        html: true,
+        breaks: true,
+        linkify: true,
+        typographer: true
+      });
+
+      const options = {
+        headers: {
+          "cache-control": "no-cache",
+          "pragma": "no-cache"
+        },
+        method: "GET"
+      };
+
+      fetch("cv.md", options)
+        .then(response => response.text())
+        .then(text => {
+          content.innerHTML = md.render(text);
+        })
+        .catch(() => {
+          content.innerText = "Something went wrong";
+        });
+    </script>
+  </body>
+</html>
