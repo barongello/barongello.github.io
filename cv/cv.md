@@ -33,7 +33,7 @@ This is my real english, did not use translators and no native english speaker n
 
 ## <a id="basic-informations"></a>Basic informations
 
-Wagner Barongello (he/him/his) · 37 years · Brazilian
+Wagner Barongello (he/him/his) · 38 years · Brazilian
 Brazil · São Paulo · BRT (GMT-3)
 
 Available for:
@@ -81,7 +81,7 @@ Baldonnell, Dublin, Ireland · Remote
 Languages: HTML 5, CSS 3, JavaScript, TypeScript
 Databases: PostgreSQL
 
-Developed games and playable ads using Phaser and React
+Developed games and playable ads using Phaser, React and Vue
 
 Used Node.js, WebPack and Vite for building/packaging
 
@@ -238,7 +238,7 @@ Jan 2013 - Jul 2017 · 4 yrs 6 mos
 
 Worked in a project to visualize and create voxel regions of magnetic resonance images of brains
 
-These data were then used to train a neural network to automatically recognize brain's regions and detect potential anomalies
+These data were then used to train a neural network (artificial intelligence) to automatically recognize brain's regions and detect potential anomalies
 
 ### Universidade de São Caetano do Sul
 
@@ -247,7 +247,7 @@ Jan 2006 - Dec 2010 · 5 yrs
 
 #### Scientific research
 
-Worked in a project that simulates a variety of cell shapes and cellular communication to better understand (and maybe predict) how cancer's cells interact with other cells and develop/spread itself
+Worked in a project that simulates a variety of cell shapes and cellular communication to better understand (and maybe predict) how cancer's cells interact with other cells and develop/spread itself with neural networks (artificial intelligence)
 
 The main focus was the juxtacrine communication
 
@@ -292,6 +292,7 @@ Teached math to people that have difficulties with it and/or that wanted to join
 - Bots making
 - Cheats making
 - Neural networks
+- Artificial intelligence
 - Electronics
 &nbsp;
 - Problems solving
@@ -328,8 +329,9 @@ Went through many and many languages over the years. Some more deeply, some supe
 
 I am not an wandering encyclopedia and I often read their documentations. Also I am not afraid or ashamed of asking things for others or searching around the web (nowadays we have plenty of good technical subjects sources)
 
-If it is a matter of the ones I love more, they are, to name a few:
+If it is a matter of the ones I love more, they are, to name a few, in no particular order:
   - C
+  - Zig
   - Rust
   - C++
   - Assembly
@@ -469,7 +471,7 @@ Then he asked me to send it to him and he paid me. They improved their protectio
 
 #### Desktop
 
-- Display: 2x 22"
+- Display: 2x 22" + 1x 19"
 - Processor: i7-3770 (2012)
 - RAM: 16GB DDR3
 - SSD: 2x 240GB
@@ -485,7 +487,7 @@ Then he asked me to send it to him and he paid me. They improved their protectio
 ### Software
 
 - Windows 11
-- Pop!_OS
+- Omarchy
 - MacOS
 
 ### Are you open for hybrid/on site positions?
