@@ -33,7 +33,7 @@ This is my real english, did not use translators and no native english speaker n
 
 ## <a id="basic-informations"></a>Basic informations
 
-Wagner Barongello (he/him/his) · 38 years · Brazilian
+Wagner Barongello (he/him/his) · Brazilian
 Brazil · São Paulo · BRT (GMT-3)
 
 Available for:
@@ -68,14 +68,14 @@ Wanna know more? [Drop me a message](#contact)!
 
 ### Current
 
-Working as a contractor until mid November/2025
+Working as a contractor and trying to build some personal projects
 
-Looking for my next job
+Looking for my next full time job
 
 #### Phaser Developer
 
-Magic Media · Full-time Contractor
-May 2025 - Nov 2025 · 6 mos
+Magic Media · Full-time/Part-time Contractor
+May 2025 - May 2026 · 1 yr
 Baldonnell, Dublin, Ireland · Remote
 
 Languages: HTML 5, CSS 3, JavaScript, TypeScript
