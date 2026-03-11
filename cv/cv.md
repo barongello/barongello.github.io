@@ -75,7 +75,7 @@ Looking for my next full time job
 #### Phaser Developer
 
 Magic Media · Full-time/Part-time Contractor
-May 2025 - May 2026 · 1 yr
+May 2025 - Mar 2026 · 10 mos
 Baldonnell, Dublin, Ireland · Remote
 
 Languages: HTML 5, CSS 3, JavaScript, TypeScript
@@ -88,7 +88,7 @@ Used Node.js, WebPack and Vite for building/packaging
 #### Consultant and Independent Researcher
 
 Security, Reverse Engineering and Programming
-Dec 1997 - Present · 27 yrs and counting
+Dec 1997 - Present · 28 yrs and counting
 São Paulo, Brazil
 
 Languages: Any
